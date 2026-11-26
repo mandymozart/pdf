@@ -1,0 +1,36 @@
+{
+  "name": "local-pdf",
+  "version": "1.1.1",
+  "description": "Local PDF forms, stamping, and signing for desktop and browser",
+  "main": "desktop/main.mjs",
+  "scripts": {
+    "dev": "vite --host localhost",
+    "build": "vite build",
+    "preview": "vite preview --host localhost",
+    "desktop": "npm run build && electron .",
+    "package:win": "npm run build && electron-builder --win nsis",
+    "mcp": "node desktop/mcp.mjs"
+  },
+  "keywords": [],
+  "author": "PDF",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "pdf-lib": "^1.17.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.2",
+    "electron": "^45.5.0",
+    "electron-builder": "^26.18.0",
+    "feather-icons": "^4.29.2",
+    "pdfjs-dist": "^6.5.438",
+    "svelte": "^5.59.2",
+    "vite": "^8.3.8",
+    "vite-plugin-static-copy": "^4.1.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

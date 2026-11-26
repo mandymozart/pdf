@@ -1,0 +1,20 @@
+appId: app.localpdf.desktop
+productName: PDF
+directories:
+  output: release
+files:
+  - dist/**/*
+  - desktop/**/*
+  - src/placement.mjs
+  - src/form-fields.mjs
+win:
+  target: nsis
+  signExecutable: false
+nsis:
+  oneClick: true
+  perMachine: false
+  createDesktopShortcut: true
+
+
+  include: build/installer.nsh
+
